@@ -58,10 +58,21 @@ function highestCount(arrayNambrs) {
 
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+  
+
+      if  (((mouse-cat1) === (cat2-mouse))){
+        return 'os gatos trombam e o rato foge'
+      } 
+     if (mouse-cat1 > mouse-cat2) {
+         return 'cat1';
+      } else if (mouse-cat2 > mouse-cat1) {
+          return 'cat2';
+      } 
+
+
   // seu código aqui
 }
-
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
