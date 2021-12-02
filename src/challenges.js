@@ -24,14 +24,22 @@ function splitSentence(string) {
 
 
 // Desafio 4
-function concatName() {
+function concatName(arrayStrings) {
+    let lastItem = (arrayStrings[arrayStrings.length - 1])
+    let firstItem =(arrayStrings[0])
+    let varConcatName = lastItem + ', ' + firstItem; 
+    return varConcatName;
+  // seu código aqui
+}
+ 
+
+// Desafio 5
+function footballPoints(wins, ties) {
+  let amountOfPoints = (wins*3) + ties
+  return amountOfPoints;
   // seu código aqui
 }
 
-// Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
 
 // Desafio 6
 function highestCount() {
