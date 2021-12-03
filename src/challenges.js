@@ -119,47 +119,31 @@ function encode(strings) {
                          encode+=strings[i];
                      }    
          }       }
-                         
-       
-         
-     
-    
- 
- 
+
  return encode;
 }
   // seu código aqui
 
 function decode(strings) {
-  let a =/''/
-    
     let encode='';
-   
-      for (let i in strings){
-              
-                      if(strings[i]==='1') {
-                              encode+='a';
-                          } else if(strings[i]==='2') {
-                              encode+='e';
-                          }else if(strings[i]=='3') {
-                              encode+='i';
-                          } else if(strings[i]==='4') {
-                              encode+='o'; 
-                          } else if(strings[i]==='5') {
-                              encode+='u';  
-                          } else {
-                              encode+=strings[i];
-                          }    
-              }       
-                              
-            
+ for (let i in strings){
+   if(strings[i]==='1') {
+        encode+='a';
+    } else if(strings[i]==='2') {
+        encode+='e';
+    }else if(strings[i]=='3') {
+        encode+='i';
+    } else if(strings[i]==='4') {
+        encode+='o'; 
+    } else if(strings[i]==='5') {
+        encode+='u';  
+    } else {
+        encode+=strings[i];
+    }    
              
-         
-         
-      
-      
+  }                            
       return encode;
-  }
+}
 
 module.exports = {
   calcArea,
