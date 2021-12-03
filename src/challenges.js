@@ -105,18 +105,18 @@ function encode(strings) {
      }else if (strings[i] === strings[i].toUpperCase()) {
            encode+=strings[i];
          }else if (strings[i] === strings[i].toLowerCase()){
-                     if(strings[i]=='a') {
-                         encode+='1';
-                     } else if(strings[i]=='e') {
-                         encode+='2';
-                     }else if(strings[i]=='i') {
-                         encode+='3';
-                     } else if(strings[i]=='o') {
-                         encode+='4'; 
-                     } else if(strings[i]=='u') {
-                         encode+='5';  
-                     } else {
-                         encode+=strings[i];
+             if(strings[i]=='a') {
+                 encode+='1';
+             } else if(strings[i]=='e') {
+                 encode+='2';
+             }else if(strings[i]=='i') {
+                 encode+='3';
+             } else if(strings[i]=='o') {
+                 encode+='4'; 
+             } else if(strings[i]=='u') {
+                 encode+='5';  
+             } else {
+                 encode+=strings[i];
                      }    
          }       }
 
@@ -138,8 +138,8 @@ function decode(strings) {
     } else if(strings[i]==='5') {
         encode+='u';  
     } else {
-        encode+=strings[i];
-    }    
+           encode+=strings[i];
+       }    
              
   }                            
       return encode;
