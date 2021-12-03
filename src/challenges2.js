@@ -84,8 +84,56 @@ function generatePhoneNumber(phoneNumber) {
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  function  checkMeasures(lineA, lineB, lineC){
+    if (lineA >(lineB+lineC)) {
+        return false;
+    }else if (lineB >(lineA+lineC)) {
+        return false;
+    }else if (lineC>(lineA+lineB)) {
+        return false;
+
+    }else {
+        return true;
+    }
+
+}
+
+function differenceMeasure(lineA, lineB, lineC){
+
+  if (lineA >Math.abs((lineB-lineC))) {
+      return false;
+  }else if (lineB >Math.abs((lineA-lineC))) {
+      return false;
+  }else if (lineC>Math.abs((lineA-lineB))) {
+      return false;
+
+  }else {
+      return true;
+  }
+
+}
+if (checkMeasures(lineA, lineB, lineC)) {
+  return true;
+}else {
+  return false
+}
+if(differenceMeasure(lineA, lineB, lineC)) {
+  return true;
+}else {
+  return false;
+}
+
+
+
+
+ if (checkMeasures(lineA, lineB, lineC) && differenceMeasure(lineA, lineB, lineC)) {
+    return false;
+}  else {
+  return true;
+}
+
+
 }
 
 // Desafio 13
