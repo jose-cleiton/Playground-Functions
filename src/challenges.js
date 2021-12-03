@@ -90,17 +90,76 @@ function fizzBuzz(arrayNumber) {
   }    
   return arrayNambrsTesting;
 }   
-  // seu código aqui
-
-//fizzBuzz([2, 15, 7, 9, 45])
-
+ 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(strings) {
+  let a =/''/
+ 
+ let encode='';
+ for (let i in strings){
+     strings[i] = strings.charAt(i);
+     if (a.test(strings[i])) {
+       encode+=strings[i];
+     }else if (!isNaN(strings[i] * 1)){
+         encode+=strings[i];
+     }else if (strings[i] === strings[i].toUpperCase()) {
+           encode+=strings[i];
+         }else if (strings[i] === strings[i].toLowerCase()){
+                     if(strings[i]=='a') {
+                         encode+='1';
+                     } else if(strings[i]=='e') {
+                         encode+='2';
+                     }else if(strings[i]=='i') {
+                         encode+='3';
+                     } else if(strings[i]=='o') {
+                         encode+='4'; 
+                     } else if(strings[i]=='u') {
+                         encode+='5';  
+                     } else {
+                         encode+=strings[i];
+                     }    
+         }       }
+                         
+       
+         
+     
+    
+ 
+ 
+ return encode;
 }
-function decode() {
   // seu código aqui
-}
+
+function decode(strings) {
+  let a =/''/
+    
+    let encode='';
+   
+      for (let i in strings){
+              
+                      if(strings[i]==='1') {
+                              encode+='a';
+                          } else if(strings[i]==='2') {
+                              encode+='e';
+                          }else if(strings[i]=='3') {
+                              encode+='i';
+                          } else if(strings[i]==='4') {
+                              encode+='o'; 
+                          } else if(strings[i]==='5') {
+                              encode+='u';  
+                          } else {
+                              encode+=strings[i];
+                          }    
+              }       
+                              
+            
+             
+         
+         
+      
+      
+      return encode;
+  }
 
 module.exports = {
   calcArea,
