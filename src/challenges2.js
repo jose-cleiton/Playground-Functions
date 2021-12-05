@@ -137,10 +137,26 @@ if(differenceMeasure(lineA, lineB, lineC)) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(drink) {
+
+  let   glassOfWater=0;
+  for ( let i in drink) {
+    if (drink[i]===' '){
+      continue
+    }else if (!isNaN(drink[i] )){
+      glassOfWater += parseInt(drink[i]);
+    }
+  }
+  if (glassOfWater ===1) {
+    return glassOfWater + ' copo de água'
+  }else {
+    return glassOfWater + ' copos de água'
+  }
+ 
+   
   // seu código aqui
 }
-
+ 
 module.exports = {
   generatePhoneNumber,
   techList,
